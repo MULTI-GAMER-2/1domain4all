@@ -1,1 +1,5 @@
-
+<script>
+firebase.database().ref('data').on('value',(snap)=>{
+    console.log(snap.val());
+  });
+</script>
