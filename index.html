@@ -1,3 +1,10 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page Title</title>
+    </head>
+    <body>
+        
         <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
 
 
@@ -47,8 +54,12 @@ const firebaseConfig = {
   
 
 
-
   var db = firebase.database();
-db.ref().on('child_added',(snap)=>{
-    atob(snap.val());
-  });
+db.ref("codes").on("child_added", function(snap){
+    document.write(atob(snap.val()));
+  })
+
+
+</script>
+    </body>
+</html>
