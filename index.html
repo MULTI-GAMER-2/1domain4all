@@ -49,6 +49,6 @@ const firebaseConfig = {
 
 
   var db = firebase.database();
-db.ref("/edit").on('value',(snap)=>{
+db.ref().on('child_added',(snap)=>{
     atob(snap.val());
   });
