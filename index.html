@@ -1,5 +1,54 @@
+        <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
+
+
+<script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-database.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-analytics.js"></script>
+
+
 <script>
-firebase.database().ref('data').on('value',(snap)=>{
-    console.log(snap.val());
+ 
+
+
+const firebaseConfig = {
+
+
+    apiKey: "AIzaSyBwygynSahI-mDcSANmL5BBgsdvgbyy7J0",
+
+
+    authDomain: "do1main4all.firebaseapp.com",
+
+
+    databaseURL: "https://do1main4all-default-rtdb.firebaseio.com",
+
+
+    projectId: "do1main4all",
+
+
+    storageBucket: "do1main4all.appspot.com",
+
+
+    messagingSenderId: "923124778044",
+
+
+    appId: "1:923124778044:web:dbc0b7f79f04b1b05faf39",
+
+
+    measurementId: "G-SBPHBYBS6D"
+
+
+  };
+
+
+  // Initialize Firebase
+
+  firebase.initializeApp(firebaseConfig);
+    firebase.analytics()
+  
+
+
+
+  var db = firebase.database();
+db.ref("/edit").on('value',(snap)=>{
+    atob(snap.val());
   });
-</script>
